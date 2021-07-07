@@ -1,22 +1,45 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
+import Family from "./Family";
+
+const familyInfo = [
+  {
+    firstName: "Michele",
+    age: "50",
+    relation: "mother",
+    familyKey: "1"
+  },
+  {
+    firstName: "Mike",
+    age: "50",
+    relation: "father",
+    familyKey: "2"
+  },
+  {
+    firstName: "Michael",
+    age: "28",
+    relation: "brother",
+    familyKey: "3"
+  },
+  {
+    firstName: "Nicole",
+    age: "22",
+    relation: "sister",
+    familyKey: "4"
+  }
+];
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <h1>List of my family members:</h1>
+        {familyInfo.map((family) => {
+          const { firstName, age, relation, familyKey } = family;
+          return (
+              <Family key={familyKey} firstName={firstName} age={age} relation={relation} />
+          )
+        })}
       </header>
     </div>
   );
