@@ -35,7 +35,8 @@ function App() {
       <header className="App-header">
         <h1>List of my family members:</h1>
         {familyInfo.map((family) => {
-          /* const { firstName, age, relation, familyKey } = family; */
+          /* USED SPREAD BELOW 
+          const { firstName, age, relation, familyKey } = family; */
           return (
             <Family
               key={family.familyKey}
