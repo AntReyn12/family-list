@@ -35,13 +35,15 @@ function App() {
       <header className="App-header">
         <h1>List of my family members:</h1>
         {familyInfo.map((family) => {
-          const { firstName, age, relation, familyKey } = family;
+          /* const { firstName, age, relation, familyKey } = family; */
           return (
             <Family
-              key={familyKey}
+              key={family.familyKey}
+              {...family}
+              /* key={familyKey}
               firstName={firstName}
               age={age}
-              relation={relation}
+              relation={relation} */
             />
           );
         })}
