@@ -1,5 +1,5 @@
 import React from "react";
-import './App.css';
+import "./App.css";
 import Family from "./Family";
 
 const familyInfo = [
@@ -7,26 +7,26 @@ const familyInfo = [
     firstName: "Michele",
     age: "50",
     relation: "mother",
-    familyKey: "1"
+    familyKey: "1",
   },
   {
     firstName: "Mike",
     age: "50",
     relation: "father",
-    familyKey: "2"
+    familyKey: "2",
   },
   {
     firstName: "Michael",
     age: "28",
     relation: "brother",
-    familyKey: "3"
+    familyKey: "3",
   },
   {
     firstName: "Nicole",
     age: "22",
     relation: "sister",
-    familyKey: "4"
-  }
+    familyKey: "4",
+  },
 ];
 
 function App() {
@@ -37,8 +37,13 @@ function App() {
         {familyInfo.map((family) => {
           const { firstName, age, relation, familyKey } = family;
           return (
-              <Family key={familyKey} firstName={firstName} age={age} relation={relation} />
-          )
+            <Family
+              key={familyKey}
+              firstName={firstName}
+              age={age}
+              relation={relation}
+            />
+          );
         })}
       </header>
     </div>
